@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blanco Mini POS System</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" type = "text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <table border = "1">
+            <caption><h1>Noel Blanco's Store <b>POS</b></h1></caption>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Extended Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="product1" value="Mechanical Keyboard"> </td>
+                    <td><input type="text" id="price1" placeholder="Enter the price"></td>
+                    <td>
+                     <table>
+                        <tr>
+                            <td><button type="button" id="incqty1" onclick="getUpdate('+',1)" disabled>+</button></td>
+                            <td><input type="text" id="qty1" onkeyup="qtyfun(1)" placeholder="Enter qty" value="0"></td>
+                            <td><button type="button" id="decqty1" onclick="getUpdate('-',1)" disabled>-</button></td>
+                        </tr>
+                     </table>
+                    </td>
+                     <td><input type="text" id="ep1" value="0" placeholder="Extended price" readonly></td>
+                     <!--Product one-->
+                     <tr>
+                        <td><input type="text" id="product2" value="Logitech Mouse"></td>
+                        <td><input type="text" id="price2" placeholder="Enter price"></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><button type="button" id="incqty2" onclick="getUpdate('+',2)" disabled>+</button></td>
+                                    <td><input type="text" id="qty2" onkeyup="qtyfun(2)" placeholder="Enter qty" value="0"></td>
+                                    <td><button type="button" id="decqty2" onclick="getUpdate('-',2)" disabled>-</button></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td><input type="text" id = "ep2" value="0" placeholder="Extended price" readonly></td>
+                        
+                     </tr> <!--product two-->
+                     <tr>
+                        <td><input type="text" id="product3" value="HyperX Headset"></td>
+                        <td><input type="text" id="price3" placeholder="Enter price"></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><button type="button" id="incqty3" onclick="getUpdate('+',3)" disabled>+</button></td>
+                                    <td><input type="text" id="qty3" onkeyup="qtyfun(3)" placeholder="Enter qty" value="0"></td>
+                                    <td><button type="button" id="decqty3" onclick="getUpdate('-',3)" disabled>-</button></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td><input type="text" id="ep3" value="0" placeholder="Extended price" readonly></td>
+
+                     </tr><!--product 3-->
+                     <tr>
+                        <td><input type="text" id="product4" value="RTX 3090 NVIDIA OC"></td>
+                        <td><input type="text" id="price4" placeholder="Enter price"></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><button type="button" id="incqty4" onclick="getUpdate('+',4)" disabled>+</button></td>
+                                    <td><input type="text" id="qty4" onkeyup="qtyfun(4)" placeholder="Enter qty" value="0"></td>
+                                    <td><button type="button" id="decqty4" onclick="getUpdate('-',4)" disabled>-</button></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td><input type="text" id="ep4" value="0" placeholder="Extended price" readonly></td>
+                     </tr> <!--product 4-->
+                     <tr>
+                        <td><input type="text" id="product5" value="CV50 500W"></td>
+                        <td><input type="text" id="price5" placeholder="Enter price"></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><button type="button" id="incqty5" onclick="getUpdate('+',5)" disabled>+</button></td>
+                                    <td><input type="text" id="qty5" onkeyup="qtyfun(5)" placeholder="Enter qty" value="0"></td>
+                                    <td><button type="button" id="decqty5" onclick="getUpdate('-',5)" disabled>-</button></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td><input type="text" id="ep5" value="0" placeholder="Extended price" readonly></td>
+                     </table>
+                </tr> <!--product 5-->
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td><input type="text" id="subTotal" placeholder="Sub Total" readonly></td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td><input type="text" id="tax" placeholder="Tax" readonly></td>
+            </tr>
+            <tr>
+                <td>Overall total:</td>
+                <td><input type="text" id="overAllTotal" placeholder="Overall total" readonly></td>
+            </tr>
+            <tr>
+                <td>Enter Cash:</td>
+                <td><input type="text" id="cash" placeholder="Enter Cash"></td>
+            </tr>
+            <tr>
+                <td>Change:</td>
+                <td><input type="text" id="change" placeholder="Change" readonly></td>
+
+            </tr>
+        </table>
+    </div>
+
+<script src="java.js"></script>
+</body>
+</html>
